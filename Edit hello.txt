@@ -1,0 +1,3 @@
+Hello, GIT!
+--- Editing this file here ---
+This is an edit on a new branch.
