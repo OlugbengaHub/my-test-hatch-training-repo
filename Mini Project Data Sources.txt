@@ -1,0 +1,72 @@
+Data sources - ArcGIS Mini Project 02/09/2025
+
+1) TfL: https://data.london.gov.uk/dataset/public-transport-journeys-type-transport/
+2) DIVA-GIS - https://diva-gis.org/data.html
+3) Tfl Journey Types - https://www.kaggle.com/datasets/codebreaker619/london-public-transport-data-by-type-of-transport
+4) Road Safety Data: https://www.data.gov.uk/dataset/cb7ae6f0-4be6-4935-9277-47e5ce24a11f/road-accidents-safety-data
+5) Get Information About Schools: https://get-information-schools.service.gov.uk/Downloads
+6) GBR_Education_Facilities: https://data.humdata.org/dataset/hotosm_gbr_education_facilities (Points/Polygons)
+7) Census 2021: https://www.ons.gov.uk/datasets/RM047/editions/2021/versions/1
+8) OS Open Roads - https://www.data.gov.uk/dataset/65bf62c8-eae0-4475-9c16-a2e81afcbdb0/os-open-roads1
+9) NHS Organisation Data: https://digital.nhs.uk/services/organisation-data-service/data-search-and-export/csv-downloads/gp-and-gp-practice-related-data
+10) London's Population: https://data.london.gov.uk/dataset/london-s-diverse-population-
+11) London Schools - https://data.london.gov.uk/dataset/?q=london%20schools -- https://data.london.gov.uk/dataset/london-schools-atlas/
+12) London crime statistics: https://data.london.gov.uk/dataset/recorded_crime_summary
+13) Crimes in London: https://data.police.uk/data/
+14) GPs by constituency: https://commonslibrary.parliament.uk/constituency-data-gps-and-gp-practices/
+15) London Busstops: https://gis-tfl.opendata.arcgis.com/
+
+Revised Feature Layers Datasets
+1) London schools -- Point layer - https://data.london.gov.uk/dataset/london-schools-atlas/
+2) Health Facilities (GPs Practices) -- Point layer - https://data.london.gov.uk/topic/health/
+3) TfL Roads|Underground|Overground|DLR -- Point/Line layer - https://gis-tfl.opendata.arcgis.com/
+4) Crime & Traffic Incidents -- Point layer - https://data.london.gov.uk/publisher/mps/
+5) Administrative boundaries -- Polygon layer - https://data.london.gov.uk/dataset/statistical-gis-boundary-files-london/
+6) Population -- Raster/Polygon layer - https://trustforlondon.org.uk/data/geography-population/
+7) Crime -- https://data.police.uk/data/fetch/8156182a-11f5-4e04-b29e-fdf1c2d372f6/
+
+
+London Boroughs -- 15 
+
+'City of London',
+'Westminster',
+'Camden',
+'Hackney',
+'Hammersmith & Fulham',
+'Haringey',
+'Islington',
+'Kensington & Chelsea',
+'Lambeth',
+'Lewisham',
+'Newham',
+'Southwark',
+'Tower Hamlets',
+'Wandsworth',
+'Greenwich'
+
+
+ArcGIS Pro -- Tools used:
+
+1) Select By Attribute to filter only Central London Boundary
+2) Clip - Data Cleaning
+3) Buffer - Proximity to facilities/Amenities - using standard walking distance for safety zones
+4) Overlay (Intersect/Spatial Join) -
+5) Summarize Within  - Tool replaces a manual Clip + Spatial Join workflow and is less error-prone
+6) Join Field - 
+7) Extract by Mask - Extract information based on certain geographical boundary i.e., extract 
+Central_London_Boundary from a Raster population density - You’ll get a new raster showing only the population density within Central London. This clipped raster can be used for:
+
+Zonal statistics (e.g., total population).
+Visualization in maps or dashboards.
+Further analysis like accessibility or service coverage.
+
+Smart Education Dashboard: School Accessibility and Safety Mapping 
+on central London". Project Overview: In this project, you will design an interactive ArcGIS Dashboard to assess 
+the accessibility and safety of educational institutions within a selected 
+region. This dashboard will integrate spatial layers such as school 
+locations, health centers, public transport, road safety incidents, and 
+population data to support urban education planning and decision-making. Objectives: 1. Visualise school locations and categorize them by type.
+ 2. Analyse accessibility to health and emergency facilities.
+ 3. Assess environmental safety based on proximity to traffic or crime 
+incidents. 
+4. Present insights through interactive charts, indicators, and maps. 
